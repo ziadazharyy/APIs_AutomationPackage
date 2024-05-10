@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 public class Methods {
 
@@ -36,6 +37,13 @@ public class Methods {
 
         // Print the formatted date and time
         return formattedDateTime;
+    }
+
+    public int random(){
+        Random random = new Random();
+        // Generating a random number between 0 and 9
+        int randomNumber = random.nextInt(10);
+        return randomNumber;
     }
 
     public static String removeTagsFromJson(String jsonStr, List<String> tagsToRemove) {
