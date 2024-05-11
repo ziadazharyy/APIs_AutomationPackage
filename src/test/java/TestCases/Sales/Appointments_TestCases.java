@@ -106,6 +106,25 @@ public class Appointments_TestCases {
 //        Assert.assertEquals(resp.jsonPath().get("innerResult"), "");
 //        Assert.assertEquals(resp.jsonPath().get("correlationId"), "");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Test
     public void appointments_InvalidItemId() {
 
