@@ -106,20 +106,28 @@ public class Appointments_TestCases {
 //        Assert.assertEquals(resp.jsonPath().get("innerResult"), "");
 //        Assert.assertEquals(resp.jsonPath().get("correlationId"), "");
     }
+    @Test
+    public void appointments_HappyScenario_Testtttttttttt() {
 
+        String appointments_req = requests.Appointmnts_Req(appointments);
+        System.out.println("Appointments Request : " + appointments_req);
 
+        RequestSpecification requestSpec = given().relaxedHTTPSValidation();
+        requestSpec.header("Content-Type", "application/json");
+        requestSpec.body(appointments_req);
 
+        Response resp = requestSpec.post(requests.base_URL_Login + appointments_URL);
+        System.out.println("Appointments Response : " + resp.asString());
 
-
-
-
-
-
-
-
-
-
-
+//        Assert.assertNotNull(resp.jsonPath().get("result"));
+//        Assert.assertTrue(resp.jsonPath().get("isSuccess"));
+//        Assert.assertNull(resp.jsonPath().get("message"));
+//        Assert.assertTrue(resp.jsonPath().get("timestamp").toString().contains(methods.getDate()));
+//        Assert.assertEquals(resp.jsonPath().get("statusCode").toString(), "200");
+//        Assert.assertNull(resp.jsonPath().get("stackTrace"));
+//        Assert.assertEquals(resp.jsonPath().get("innerResult"), "");
+//        Assert.assertEquals(resp.jsonPath().get("correlationId"), "");
+    }
 
 
 
